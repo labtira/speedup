@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "question_key": "faqs.q1.question",
+    "answer_key": "faqs.q1.answer"
+  },
+  {
+    "id": 2,
+    "question_key": "faqs.q2.question",
+    "answer_key": "faqs.q2.answer"
+  },
+  {
+    "id": 3,
+    "question_key": "faqs.q3.question",
+    "answer_key": "faqs.q3.answer"
+  },
+  {
+    "id": 4,
+    "question_key": "faqs.q4.question",
+    "answer_key": "faqs.q4.answer"
+  },
+  {
+    "id": 5,
+    "question_key": "faqs.q5.question",
+    "answer_key": "faqs.q5.answer"
+  }
+]

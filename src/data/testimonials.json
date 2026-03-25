@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Omar El Fassi",
+    "role_key": "testimonials.roles.businessOwner",
+    "content_key": "testimonials.quotes.omar",
+    "rating": 5,
+    "avatar": "https://i.pravatar.cc/150?u=omar"
+  },
+  {
+    "id": 2,
+    "name": "Sarah Johnson",
+    "role_key": "testimonials.roles.tourist",
+    "content_key": "testimonials.quotes.sarah",
+    "rating": 5,
+    "avatar": "https://i.pravatar.cc/150?u=sarah"
+  },
+  {
+    "id": 3,
+    "name": "Yassine Mansouri",
+    "role_key": "testimonials.roles.freelancer",
+    "content_key": "testimonials.quotes.yassine",
+    "rating": 4,
+    "avatar": "https://i.pravatar.cc/150?u=yassine"
+  }
+]
