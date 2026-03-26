@@ -83,7 +83,7 @@ export default function CarCard({ car }) {
         <div className={cn("flex items-center justify-between mb-6", isRtl ? "flex-row-reverse" : "flex-row")}>
           <div>
             <span className="text-2xl font-bold text-primary">{price_per_day} DH</span>
-            <span className="text-muted-foreground text-sm font-medium">/ {t("carDetails.perDay")}</span>
+            <span className="text-muted-foreground text-sm font-medium"> / {t("carDetails.perDay")}</span>
           </div>
         </div>
 
