@@ -37,7 +37,7 @@ export default function Hero() {
         />
       </div>
 
-      <div className="container mx-auto px-4 md:px-6 relative z-20 mb-40">
+      <div className="container mx-auto px-4 md:px-6 relative z-20 mb-20">
         <div className={cn("max-w-3xl", isRtl ? "text-right" : "text-left")}>
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
