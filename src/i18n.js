@@ -112,6 +112,22 @@ const resources = {
           question: "Is insurance included in the price?",
           answer: "Basic insurance (Third Party Liability) is included in all rentals. We also offer comprehensive insurance (CDW - Collision Damage Waiver) with different levels of excess/deductible for your peace of mind."
         }
+      },
+      booking: {
+        title: "Book Your {{car}}",
+        subtitle: "Fill out the form below to complete your booking. We will contact you shortly to confirm.",
+        carName: "Car Model",
+        userName: "Full Name",
+        phone: "Phone Number",
+        pickupLocation: "Pickup Location",
+        pickupDate: "Pickup Date",
+        dropDate: "Drop-off Date",
+        submit: "Complete Booking on WhatsApp",
+        placeholders: {
+          userName: "Enter your full name",
+          phone: "Enter your phone number (+212...)",
+          pickupLocation: "e.g. Casablanca Airport, Hotel..."
+        }
       }
     }
   },
@@ -224,6 +240,22 @@ const resources = {
           question: "L'assurance est-elle incluse dans le prix ?",
           answer: "L'assurance de base (responsabilité civile) est incluse dans toutes les locations. Nous proposons également une assurance tous risques (CDW) avec différents niveaux de franchise."
         }
+      },
+      booking: {
+        title: "Réserver votre {{car}}",
+        subtitle: "Remplissez le formulaire ci-dessous pour compléter votre réservation. Nous vous contacterons sous peu.",
+        carName: "Modèle de voiture",
+        userName: "Nom complet",
+        phone: "Numéro de téléphone",
+        pickupLocation: "Lieu de prise en charge",
+        pickupDate: "Date de début",
+        dropDate: "Date de fin",
+        submit: "Compléter la réservation sur WhatsApp",
+        placeholders: {
+          userName: "Entrez votre nom complet",
+          phone: "Entrez votre numéro (+212...)",
+          pickupLocation: "ex: Aéroport de Casablanca, Hôtel..."
+        }
       }
     }
   },
@@ -335,6 +367,22 @@ const resources = {
         q5: {
           question: "هل التأمين مشمول في السعر؟",
           answer: "التأمين الأساسي (المسؤولية تجاه الغير) مشمول في جميع الإيجارات. كما نقدم تأميناً شاملاً (CDW) مع مستويات مختلفة من مبلغ التحمل."
+        }
+      },
+      booking: {
+        title: "احجز سيارتك {{car}}",
+        subtitle: "يرجى ملء النموذج أدناه لإكمال عملية الحجز. سنتصل بك قريباً للتأكيد.",
+        carName: "نوع السيارة",
+        userName: "الاسم الكامل",
+        phone: "رقم الهاتف",
+        pickupLocation: "مكان الاستلام",
+        pickupDate: "تاريخ الاستلام",
+        dropDate: "تاريخ التسليم",
+        submit: "إكمال الحجز عبر واتساب",
+        placeholders: {
+          userName: "أدخل اسمك الكامل",
+          phone: "أدخل رقم هاتفك (+212...)",
+          pickupLocation: "مثال: مطار الدار البيضاء، فندق..."
         }
       }
     }

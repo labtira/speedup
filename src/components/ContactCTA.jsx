@@ -59,9 +59,9 @@ export default function ContactCTA() {
                 }}
               >
                 <img 
-                  src="https://images.unsplash.com/photo-1542362567-b052cb1341f1?auto=format&fit=crop&q=80&w=800" 
+                  src="/cars/car.jpeg" 
                   alt="CTA Car" 
-                  className="w-[500px] h-auto rounded-3xl shadow-2xl transition-transform group-hover:scale-105"
+                  className="w-[500px] aspect-square h-auto rounded-3xl shadow-2xl transition-transform group-hover:scale-105"
                 />
               </motion.div>
             </div>

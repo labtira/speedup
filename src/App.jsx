@@ -10,6 +10,7 @@ const Cars = lazy(() => import("./pages/Cars"));
 const CarDetails = lazy(() => import("./pages/CarDetails"));
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
+const Booking = lazy(() => import("./pages/Booking"));
 
 // Loading fallback
 const PageLoader = () => (
@@ -29,6 +30,7 @@ function App() {
               <Route index element={<Home />} />
               <Route path="cars" element={<Cars />} />
               <Route path="cars/:slug" element={<CarDetails />} />
+              <Route path="booking/:slug" element={<Booking />} />
               <Route path="about" element={<About />} />
               <Route path="contact" element={<Contact />} />
             </Route>

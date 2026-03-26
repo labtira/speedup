@@ -48,7 +48,7 @@ export default function CarDetails() {
       : `Hello, I have a question about the ${car.name}.\n\nLink: ${carUrl}`;
     
     const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/212600000000?text=${encodedMessage}`, "_blank");
+    window.open(`https://wa.me/212707547044?text=${encodedMessage}`, "_blank");
   };
 
   return (
@@ -132,15 +132,15 @@ export default function CarDetails() {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <button
-                onClick={() => handleWhatsApp("call")}
+              <a
+                href="tel:+212707547044"
                 className="flex items-center justify-center gap-3 border-2 border-border hover:bg-muted transition-all py-5 rounded-2xl font-black text-lg uppercase tracking-wider"
               >
                 <PhoneCall className="w-6 h-6 text-primary" />
                 {t("carDetails.contactUs")}
-              </button>
+              </a>
               <button
-                onClick={() => handleWhatsApp("book")}
+                onClick={() => navigate(`/booking/${slug}`)}
                 className="flex items-center justify-center gap-3 bg-primary hover:bg-primary/90 text-white transition-all py-5 rounded-2xl font-black text-lg uppercase tracking-wider shadow-xl shadow-primary/20 active:scale-95"
               >
                 <MessageCircle className="w-6 h-6" />

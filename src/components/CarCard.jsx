@@ -30,7 +30,7 @@ export default function CarCard({ car }) {
       : `Hello, I have a question about the ${name}.\n\nLink: ${carUrl}`;
     
     const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/212600000000?text=${encodedMessage}`, "_blank");
+    window.open(`https://wa.me/212707547044?text=${encodedMessage}`, "_blank");
   };
 
   return (
@@ -87,19 +87,29 @@ export default function CarCard({ car }) {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-3">
-          <button
-            onClick={(e) => handleWhatsApp(e, "call")}
-            className="flex items-center justify-center gap-2 border border-border hover:bg-muted transition-colors py-3 rounded-xl font-semibold text-sm"
+        <div className="grid grid-cols-[auto_auto_1fr] gap-3">
+          <a
+            href="tel:+212600000000"
+            onClick={(e) => e.stopPropagation()}
+            className="flex items-center justify-center w-12 h-12 border border-border hover:bg-muted transition-colors rounded-xl text-primary"
+            title={t("carDetails.contactUs")}
           >
-            <PhoneCall className="w-4 h-4" />
-            {t("carDetails.contactUs")}
-          </button>
+            <PhoneCall className="w-5 h-5" />
+          </a>
           <button
             onClick={(e) => handleWhatsApp(e, "book")}
-            className="flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white transition-all py-3 rounded-xl font-semibold text-sm shadow-lg shadow-primary/20 active:scale-95"
+            className="flex items-center justify-center w-12 h-12 border border-border hover:bg-muted transition-colors rounded-xl text-green-500"
+            title="WhatsApp"
           >
-            <MessageCircle className="w-4 h-4" />
+            <MessageCircle className="w-5 h-5" />
+          </button>
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              navigate(`/booking/${slug}`);
+            }}
+            className="flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white transition-all rounded-xl font-bold text-sm shadow-lg shadow-primary/20 active:scale-95"
+          >
             {t("carDetails.bookNow")}
           </button>
         </div>
