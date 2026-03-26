@@ -24,15 +24,20 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center  overflow-hidden isolate">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-black/70 z-10" />
+        <div className="absolute inset-0 bg-black/60 z-10" />
         <img 
-          src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=2070&auto=format&fit=crop" 
+          src="/banner.jpg" 
           alt="Luxury Car Background" 
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover hidden md:block"
+        />
+        <img 
+          src="/g.jpeg" 
+          alt="Luxury Car Background"
+          className="w-full h-full object-cover md:hidden"
         />
       </div>
 
-      <div className="container mx-auto px-4 md:px-6 relative z-20">
+      <div className="container mx-auto px-4 md:px-6 relative z-20 mb-40">
         <div className={cn("max-w-3xl", isRtl ? "text-right" : "text-left")}>
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
@@ -40,13 +45,13 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
             className={isRtl ? "text-right" : "text-left"}
           >
-            <span className="inline-block bg-primary text-white text-sm font-bold px-4 py-2 rounded-full mb-6 shadow-lg shadow-primary/30">
+            <span className="inline-block bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-bold px-4 py-2 rounded-full mb-6 ">
               {t("hero.badge")}
             </span>
             <h1 className="text-5xl md:text-8xl font-black mb-6 leading-tight text-white">
               {t("hero.title1")} <span className="text-primary italic">{t("hero.title2")}</span> {t("hero.title3")}
             </h1>
-            <p className="text-xl text-gray-200 mb-10 max-w-xl leading-relaxed font-medium">
+            <p className="text-xs sm:text-md text-gray-200 mb-10 max-w-xl leading-relaxed font-medium">
               {t("hero.subtitle")}
             </p>
 
