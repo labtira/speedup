@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo } from "react";
 import { useSearchParams } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, MapPin, SlidersHorizontal, ChevronLeft, ChevronRight } from "lucide-react";
@@ -22,10 +22,13 @@ export default function Cars() {
   const [currentPage, setCurrentPage] = useState(1);
   const cityFilter = searchParams.get("city") || "all";
 
-  // Reset page when filters change
-  useEffect(() => {
+  // Reset page when filters change using a local state to track previous filter values
+  // This is better than useEffect for resetting state based on other state changes
+  const [prevFilters, setPrevFilters] = useState({ searchTerm, cityFilter });
+  if (prevFilters.searchTerm !== searchTerm || prevFilters.cityFilter !== cityFilter) {
+    setPrevFilters({ searchTerm, cityFilter });
     setCurrentPage(1);
-  }, [searchTerm, cityFilter]);
+  }
 
   const filteredCars = useMemo(() => {
     return carsData.filter((car) => {
@@ -101,7 +104,7 @@ export default function Cars() {
         {paginatedCars.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <AnimatePresence mode="popLayout">
-              {paginatedCars.map((car, index) => (
+              {paginatedCars.map((car) => (
                 <motion.div
                   key={car.id}
                   layout

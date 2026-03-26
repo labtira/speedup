@@ -41,16 +41,6 @@ export default function CarDetails() {
     .filter((c) => c.city === car.city && c.id !== car.id)
     .slice(0, 3);
 
-  const handleWhatsApp = (type) => {
-    const carUrl = window.location.href;
-    const message = type === "book" 
-      ? `Hello, I'm interested in renting ${car.name} in ${car.city.charAt(0).toUpperCase() + car.city.slice(1)}.\n\nLink: ${carUrl}`
-      : `Hello, I have a question about the ${car.name}.\n\nLink: ${carUrl}`;
-    
-    const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/212707547044?text=${encodedMessage}`, "_blank");
-  };
-
   return (
     <motion.div
       initial={{ opacity: 0 }}
