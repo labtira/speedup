@@ -63,7 +63,7 @@ export default function Hero() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 + index * 0.1 }}
                   onClick={() => handleCityFilter(city.value)}
-                  className="group flex items-center gap-2 bg-white/10 backdrop-blur-md hover:bg-primary text-white transition-all px-6 py-4 rounded-xl font-bold border border-white/20 shadow-xl active:scale-95"
+                  className="group flex items-center gap-2 bg-white/10 backdrop-blur-sm hover:bg-primary text-white transition-all px-6 py-4 rounded-xl font-bold border border-white/20 shadow-xl active:scale-95"
                 >
                   <MapPin className="w-4 h-4 text-primary group-hover:text-white transition-colors" />
                   {city.name}
