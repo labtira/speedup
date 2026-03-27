@@ -33,7 +33,7 @@ export default function Features() {
   return (
     <section className="py-24 bg-black">
       <div className="container mx-auto px-4 md:px-6">
-        <div className={cn("mb-16", isRtl ? "text-right" : "text-left")}>
+        <div className={cn("mb-16 text-center", isRtl ? "md:text-right" : "md:text-left")}>
           <motion.span 
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -61,13 +61,13 @@ export default function Features() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               className={cn(
-                "p-8 rounded-3xl bg-muted/30 border border-border/50 hover:border-primary/50 transition-colors group",
-                isRtl ? "text-right" : "text-left"
+                "p-8 rounded-3xl bg-muted/30 border border-border/50 hover:border-primary/50 transition-colors group text-center",
+                isRtl ? "md:text-right" : "md:text-left"
               )}
             >
               <div className={cn(
-                "w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-300",
-                isRtl ? "mr-0" : "ml-0"
+                "w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-300 mx-auto",
+                isRtl ? "md:mr-0" : "md:ml-0"
               )}>
                 {feature.icon}
               </div>

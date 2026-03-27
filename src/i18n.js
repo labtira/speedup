@@ -128,6 +128,9 @@ const resources = {
           phone: "Enter your phone number (+212...)",
           pickupLocation: "e.g. Casablanca Airport, Hotel..."
         }
+      },
+      footer: {
+        made_by: "Made by"
       }
     }
   },
