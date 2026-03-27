@@ -5,10 +5,10 @@ import { useTranslation } from "react-i18next";
 import { cn } from "../lib/utils";
 
 const cities = [
-  { name: "Casablanca", value: "casablanca" },
-  { name: "Marrakech", value: "marrakech" },
-  { name: "Rabat", value: "rabat" },
-  { name: "Tangier", value: "tangier" },
+  { name: "casablanca", count: 185 },
+  { name: "marrakech", count: 142 },
+  { name: "rabat", count: 96 },
+  { name: "tangier", count: 74 },
 ];
 
 export default function Hero() {
@@ -58,15 +58,22 @@ export default function Hero() {
             <div className="flex flex-wrap gap-4">
               {cities.map((city, index) => (
                 <motion.button
-                  key={city.value}
+                  key={city.name}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 + index * 0.1 }}
-                  onClick={() => handleCityFilter(city.value)}
-                  className="group flex items-center gap-2 bg-white/10 backdrop-blur-sm hover:bg-primary text-white transition-all px-6 py-4 rounded-xl font-bold border border-white/20 shadow-xl active:scale-95"
+                  onClick={() => handleCityFilter(city.name)}
+                  className="group flex items-center gap-4 bg-white/10 backdrop-blur-sm hover:bg-primary text-white transition-all px-4 sm:px-6 py-4 rounded-2xl font-bold border border-white/20 shadow-xl active:scale-95"
                 >
-                  <MapPin className="w-4 h-4 text-primary group-hover:text-white transition-colors" />
-                  {city.name}
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
+                    <MapPin className="w-5 h-5 text-primary group-hover:text-white transition-colors" />
+                  </div>
+                  <div className="flex flex-col items-start">
+                    <span className="text-sm leading-none mb-1">{t(`cities.${city.name}`)}</span>
+                    <span className="text-[11px] text-primary group-hover:text-white/80 transition-colors font-medium">
+                      +{city.count} {t("nav.cars")}
+                    </span>
+                  </div>
                 </motion.button>
               ))}
             </div>
