@@ -17,7 +17,9 @@ const resources = {
         title1: "DRIVE YOUR",
         title2: "DREAMS",
         title3: "TODAY",
-        subtitle: "Experience unparalleled luxury and performance with our curated fleet of premium vehicles. We offer flexible rentals, competitive pricing, and 24/7 support across all major cities."
+        subtitle: "Experience unparalleled luxury and performance with our curated fleet of premium vehicles. We offer flexible rentals, competitive pricing, and 24/7 support across all major cities.",
+        bookNow: "Book Now",
+        contactUs: "Contact Us"
       },
       features: {
         title: "Why Choose Us",
@@ -70,6 +72,9 @@ const resources = {
         seats: "{{count}} Seats"
       },
       cities: {
+        badge: "Explore Morocco",
+        title: "Rent a car in your city",
+        subtitle: "Find the perfect car in major cities across Morocco. We deliver to your doorstep or airport.",
         casablanca: "Casablanca",
         marrakech: "Marrakech",
         rabat: "Rabat",
@@ -148,7 +153,9 @@ const resources = {
         title1: "CONDUISEZ VOS",
         title2: "RÊVES",
         title3: "AUJOURD'HUI",
-        subtitle: "Découvrez un luxe et des performances inégalés avec notre flotte sélectionnée de véhicules haut de gamme. Nous proposons des locations flexibles, des prix compétitifs et un support 24/7."
+        subtitle: "Découvrez un luxe et des performances inégalés avec notre flotte sélectionnée de véhicules haut de gamme. Nous proposons des locations flexibles, des prix compétitifs et un support 24/7.",
+        bookNow: "Réserver Maintenant",
+        contactUs: "Contactez-nous"
       },
       features: {
         title: "Pourquoi Nous Choisir",
@@ -173,7 +180,7 @@ const resources = {
       home: {
         featured: {
           badge: "Meilleure Sélection",
-          title: "Véhicules Vedettes",
+          title: "Véحicules Vedettes",
           subtitle: "Explorez nos véhicules premium les plus populaires disponibles pour une réservation immédiate. Qualité et performance garanties.",
           viewAll: "Voir Toutes les Voitures"
         }
@@ -201,6 +208,9 @@ const resources = {
         seats: "{{count}} Sièges"
       },
       cities: {
+        badge: "Explorez le Maroc",
+        title: "Louez une voiture dans votre ville",
+        subtitle: "Trouvez la voiture idéale dans les principales villes du Maroc. Nous livrons à votre porte ou à l'aéroport.",
         casablanca: "Casablanca",
         marrakech: "Marrakech",
         rabat: "Rabat",
@@ -276,7 +286,9 @@ const resources = {
         title1: "قد",
         title2: "أحلامك",
         title3: "اليوم",
-        subtitle: "استمتع بفخامة وأداء لا مثيل لهما مع أسطولنا المختار من السيارات الفاخرة. نقدم تأجيراً مرناً، وأسعاراً تنافسية، ودعماً على مدار الساعة في جميع المدن الكبرى."
+        subtitle: "استمتع بفخامة وأداء لا مثيل لهما مع أسطولنا المختار من السيارات الفاخرة. نقدم تأجيراً مرناً، وأسعاراً تنافسية، ودعماً على مدار الساعة في جميع المدن الكبرى.",
+        bookNow: "احجز الآن",
+        contactUs: "اتصل بنا"
       },
       features: {
         title: "لماذا تختارنا",
@@ -329,6 +341,9 @@ const resources = {
         seats: "{{count}} مقاعد"
       },
       cities: {
+        badge: "استكشف المغرب",
+        title: "استأجر سيارة في مدينتك",
+        subtitle: "اعثر على السيارة المثالية في المدن الرئيسية عبر المغرب. نحن نسلمها إلى باب منزلك أو المطار.",
         casablanca: "الدار البيضاء",
         marrakech: "مراكش",
         rabat: "الرباط",

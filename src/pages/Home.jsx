@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Hero from "../components/Hero";
+import Cities from "../components/Cities";
 import Features from "../components/Features";
 import CarCard from "../components/CarCard";
 import Testimonials from "../components/Testimonials";
@@ -23,6 +24,7 @@ export default function Home() {
       exit={{ opacity: 0 }}
     >
       <Hero />
+      <Cities />
       <Features />
       
       <section className="py-24 bg-background">

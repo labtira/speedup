@@ -1,37 +1,26 @@
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Search, MapPin } from "lucide-react";
+import { Search, MapPin, Calendar } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { cn } from "../lib/utils";
-
-const cities = [
-  { name: "casablanca", count: 185 },
-  { name: "marrakech", count: 142 },
-  { name: "rabat", count: 96 },
-  { name: "tangier", count: 74 },
-];
 
 export default function Hero() {
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
   const isRtl = i18n.language === "ar";
 
-  const handleCityFilter = (city) => {
-    navigate(`/cars?city=${city}`);
-  };
-
   return (
     <section className="relative min-h-screen flex items-center  overflow-hidden isolate">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-black/60 z-10" />
+        <div className="absolute inset-0 bg-black/50 bg-gradient-to-b from-black/50 to-transparent z-10" />
         <img 
           src="/banner.jpg" 
           alt="Luxury Car Background" 
           className="w-full h-full object-cover hidden md:block"
         />
         <img 
-          src="/g.jpeg" 
+          src="/g63.png" 
           alt="Luxury Car Background"
           className="w-full h-full object-cover md:hidden"
         />
@@ -55,27 +44,27 @@ export default function Hero() {
               {t("hero.subtitle")}
             </p>
 
-            <div className="flex flex-wrap gap-4">
-              {cities.map((city, index) => (
-                <motion.button
-                  key={city.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.2 + index * 0.1 }}
-                  onClick={() => handleCityFilter(city.name)}
-                  className="group flex items-center gap-4 bg-white/10 backdrop-blur-sm hover:bg-primary text-white transition-all px-4 sm:px-6 py-4 rounded-2xl font-bold border border-white/20 shadow-xl active:scale-95"
-                >
-                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
-                    <MapPin className="w-5 h-5 text-primary group-hover:text-white transition-colors" />
-                  </div>
-                  <div className="flex flex-col items-start">
-                    <span className="text-sm leading-none mb-1">{t(`cities.${city.name}`)}</span>
-                    <span className="text-[11px] text-primary group-hover:text-white/80 transition-colors font-medium">
-                      +{city.count} {t("nav.cars")}
-                    </span>
-                  </div>
-                </motion.button>
-              ))}
+            <div className="flex flex-col sm:flex-row gap-4 items-center">
+              <motion.button
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.2 }}
+                onClick={() => navigate("/cars")}
+                className="w-full sm:w-auto group flex items-center justify-center gap-3 bg-primary hover:bg-primary/90 text-white transition-all px-8 py-5 rounded-2xl font-bold text-lg shadow-xl active:scale-95"
+              >
+                <Calendar className="w-6 h-6" />
+                <span>{t("hero.bookNow") || "Book Now"}</span>
+              </motion.button>
+
+              <motion.button
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.3 }}
+                onClick={() => navigate("/contact")}
+                className="w-full sm:w-auto group flex items-center justify-center gap-3 bg-white/10 backdrop-blur-md border-2 border-white/30 hover:bg-white hover:text-black text-white transition-all px-8 py-5 rounded-2xl font-bold text-lg shadow-xl active:scale-95"
+              >
+                <span>{t("hero.contactUs") || "Contact Us"}</span>
+              </motion.button>
             </div>
           </motion.div>
         </div>
